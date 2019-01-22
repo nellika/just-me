@@ -1,0 +1,57 @@
+var myExp = {
+  "education": {
+    "title": "Studied...",
+    "items": {
+      "corvinus":{
+        "from": "2011",
+        "to": "2015",
+        "name": "Corvinus University of Budapest",
+        "place": "Hungary",
+        "desc": "Business Information Technology (BSc)",
+        "long desc": "programming, project management, accounting, finance",
+        "tools": "css,html,c#,php,sql,itil"
+      },
+      "baa":{
+        "from": "2016",
+        "to": "2017",
+        "name": "Business Academy Aarhus",
+        "place": "Denmark",
+        "desc": "Multimedia Design and Communication (AP)",
+        "long desc": "design, design thinking, content creation,basic programming",
+        "tools": "illustrator,wireframing,mockup creation,js,css,html,php"
+      }
+    }
+  },
+  "work":{
+    "title": "Worked at..",
+    "items":{
+      "ibmstud":{
+        "from": "2014. 02.",
+        "to": "2015. 04.",
+        "name": "IBM Hungary ISSC",
+        "place": "Hungary",
+        "desc": "Fin & Admin Business Analyst",
+        "long desc": "As a student I was responsible for the access management of an internal accounting system in the EMEA region. I made monthly, quarterly and yearly reconciliations regarding my team’s tasks. After learning the basics, I had time for additional projects as well: I automated several processes of our team using VBA and VBScript.",
+        "tools": "sql,vbscript,vba"
+      },
+      "ibmfull":{
+        "from": "2015. 04.",
+        "to": "2016. 08.",
+        "name": "IBM Hungary ISSC",
+        "place": "Hungary",
+        "desc": "VAT Reporting Specialist, Developer",
+        "long desc": "I worked on several small development projects for multiple departments (accounts payable, VAT, external VAT client). As a developer, I helped designing and developing new web based tools for the business users. I also created and maintained several SQL reports and Excel macro templates for them.",
+        "tools": "js,css,html,sql,vba,backbone,underscore,jquery,bootstrap"
+      },
+      "sap":{
+        "from": "2017. 07.",
+        "to": "2018. 11.",
+        "name": "SAP Hungary Kft.",
+        "place": "Hungary",
+        "desc": "Developer Associate",
+        "long desc": "I work on SAP’s Integrated Business Planning Software as a junior full-stack developer. My specialization is data integration, which is a set of ETL tools.",
+        "tools": "ibp,abap,hana db procedures (sqlscript),sql,js"
+      }
+    }
+  }
+}
