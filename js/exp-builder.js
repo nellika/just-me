@@ -22,7 +22,7 @@
       let indItems = expItem.items;
       for (var iE in indItems) {
         createSearchArray(indItems[iE],exp,iE);
-        createListItem(indItems[iE],exp);
+        createListItem(indItems,iE,exp);
       }
     }
   }
@@ -32,7 +32,8 @@
     let nh1 = document.createElement("h1");
     let nul = document.createElement("ul");
 
-    nul.setAttribute("class", groupID);
+    nul.classList.add(groupID);
+    nart.classList.add("expGroup");
 
     nh1.appendChild(document.createTextNode(group));
     nart.appendChild(nh1);
@@ -40,10 +41,30 @@
     event_container.appendChild(nart);
   }
 
-  function createListItem(indItem,expID){
-    let nul = document.getElementsByClassName(expID)[0];
+  function createListItem(indItem,expID,groupID){
+    let expItem = indItem[expID];
+    let nul = document.getElementsByClassName(groupID)[0];
     let nli = document.createElement('li');
-    nli.appendChild(document.createTextNode(indItem['name']));
+    let ndiv = document.createElement('div');
+    let nh2 = document.createElement('h2');
+    let nspanTitle = document.createElement('span');
+    let nspanDesc = document.createElement('span');
+    let npLongDesc = document.createElement('p');
+
+    nli.classList.add("expItem");
+    nspanDesc.classList.add("expDesc");
+    npLongDesc.classList.add("expLongDesc");
+  /*  nli.appendChild(document.createTextNode(indItem['name']));*/
+    nspanTitle.appendChild(document.createTextNode(expItem['name']));
+    nspanDesc.appendChild(document.createTextNode(expItem['desc']));
+    npLongDesc.appendChild(document.createTextNode(expItem['long desc']));
+
+    nh2.appendChild(nspanTitle);
+    nh2.appendChild(nspanDesc);
+    ndiv.appendChild(nh2);
+    ndiv.appendChild(npLongDesc);
+    nli.appendChild(ndiv);
+    nli.id = expID;
     nul.appendChild(nli);
   }
 
@@ -57,9 +78,19 @@
 
   function searchForEvent(keyword){
     let lowKeyWord = keyword.toLowerCase();
-    for (var expItem in flatItems) {
+    for (let expItem in flatItems) {
+      let itemID = flatItems[expItem].id;
       if(flatItems[expItem].content.toLowerCase().indexOf(lowKeyWord) != -1){
-        console.log(flatItems[expItem].id);
+        console.log(itemID);
+        let expItem = document.getElementById(itemID);
+        if(expItem.classList.contains("hidden")){
+          expItem.classList.remove("hidden");
+        }
+      }else{
+        let expItem = document.getElementById(itemID);
+        if(!expItem.classList.contains("hidden")){
+          expItem.classList.add("hidden");
+        }
       }
     }
   }
