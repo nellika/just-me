@@ -43,6 +43,8 @@
 
   function createListItem(indItem,expID,groupID){
     let expItem = indItem[expID];
+    let skills = expItem['tools'];
+    let skillArray = skills.split(',');
     let nul = document.getElementsByClassName(groupID)[0];
     let nli = document.createElement('li');
     let ndiv = document.createElement('div');
@@ -50,19 +52,32 @@
     let nspanTitle = document.createElement('span');
     let nspanDesc = document.createElement('span');
     let npLongDesc = document.createElement('p');
+    let npSkills = document.createElement('p');
 
     nli.classList.add("expItem");
     nspanDesc.classList.add("expDesc");
     npLongDesc.classList.add("expLongDesc");
-  /*  nli.appendChild(document.createTextNode(indItem['name']));*/
+    npSkills.classList.add("skillSet");
+
     nspanTitle.appendChild(document.createTextNode(expItem['name']));
-    nspanDesc.appendChild(document.createTextNode(expItem['desc']));
+    nspanDesc.appendChild(document.createTextNode(expItem['desc'] + ", " + expItem['from'] + " - " + expItem['to']));
     npLongDesc.appendChild(document.createTextNode(expItem['long desc']));
+
+    for (var i in skillArray) {
+      let nspanSkill = document.createElement('span');
+      let spanPillow = document.createElement('span');
+      spanPillow.classList.add('pillow');
+      spanPillow.appendChild(document.createTextNode('#'));
+      nspanSkill.appendChild(spanPillow);
+      nspanSkill.appendChild(document.createTextNode(skillArray[i]));
+      npSkills.appendChild(nspanSkill);
+    }
 
     nh2.appendChild(nspanTitle);
     nh2.appendChild(nspanDesc);
     ndiv.appendChild(nh2);
     ndiv.appendChild(npLongDesc);
+    ndiv.appendChild(npSkills);
     nli.appendChild(ndiv);
     nli.id = expID;
     nul.appendChild(nli);
@@ -80,8 +95,8 @@
     let lowKeyWord = keyword.toLowerCase();
     for (let expItem in flatItems) {
       let itemID = flatItems[expItem].id;
-      if(flatItems[expItem].content.toLowerCase().indexOf(lowKeyWord) != -1){
-        console.log(itemID);
+      if(flatItems[expItem].content.toLowerCase().indexOf((' ' + lowKeyWord)) != -1 ||
+         flatItems[expItem].content.toLowerCase().indexOf((',' + lowKeyWord)) != -1){
         let expItem = document.getElementById(itemID);
         if(expItem.classList.contains("hidden")){
           expItem.classList.remove("hidden");
@@ -92,6 +107,33 @@
           expItem.classList.add("hidden");
         }
       }
+    }
+    toggleGroups();
+  }
+
+  function toggleGroups(){
+    let articles = document.getElementsByClassName('expGroup');
+
+    for (var i = 0; i < articles.length; i++) {
+      let items = articles[i].innerHTML;
+      if(items.indexOf('class="expItem"') != -1){
+        articles[i].classList.remove('hidden');
+      }else{
+        articles[i].classList.add('hidden');
+      }
+    }
+    toggleNotFound();
+  }
+
+  function toggleNotFound(){
+    let section = document.getElementsByClassName('life-events')[0];
+    let nf = document.getElementsByClassName('notFound')[0];
+    let items = section.innerHTML;
+
+    if(items.indexOf('class="expGroup"') != -1){
+      nf.classList.remove('show');
+    }else{
+      nf.classList.add('show');
     }
   }
 

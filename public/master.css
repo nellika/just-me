@@ -1,8 +1,9 @@
-/* variables for everyone */
+/* variables for everyone#efdab9 */
 :root {
   --main-bg-color: #393e44;
   --secondary-color: #4e4b4d;
-  --main-font-color: #efdab9;
+  --main-font-color: #c0b199;
+
   --main-font-family: 'Comfortaa', cursive;
   --long-font-family: 'Open Sans', sans-serif;;
 }
@@ -43,7 +44,6 @@ body{
   font-family: var(--main-font-family);
 }
 
-
 /* search area */
 .search-container{
   margin-top: 2em;
@@ -53,6 +53,7 @@ body{
 input#mainSearchBar{
   background-color: var(--main-bg-color);
   height: 3em;
+  width: 75%;
   border: 2px solid #4e4b4d;
   border-radius: 50px;
   padding: 0 1em;
@@ -65,11 +66,22 @@ input#mainSearchBar:hover{
   border-color: var(--secondary-font-color);
 }
 
+.notFound,.myName{
+  margin: 0 auto;
+  text-align: center;
+  color: #d0a35a;
+}
+
 /* exp area */
 
 article.expGroup ul,
 article.expGroup h1{
   margin: 0 auto;
+}
+
+article.expGroup h1{
+  color: #d0a35a;
+  font-weight: normal;
 }
 
 li.expItem{
@@ -87,6 +99,17 @@ li.expItem.hidden{
   display: none;
 }
 
+article.expGroup.hidden,
+.notFound{
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.notFound.show{
+  opacity: 1;
+  margin-top: 2em;
+}
+
 li.expItem div>*{
   padding: 0 1em;
 }
@@ -97,7 +120,7 @@ li.expItem h2{
   padding-bottom: 0.5em;
 }
 
-li.expItem span{
+li.expItem h2 span{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,12 +134,30 @@ li.expItem span.expDesc{
 
 li.expItem p.expLongDesc{
   padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+li.expItem p.skillSet{
+  border-top: 1px solid var(--secondary-color);
+  padding-top: 0.5em;
   padding-bottom: 1em;
+  overflow-wrap: break-word;
+}
+
+li.expItem p.skillSet>span{
+  padding-right: 0.4em;
+}
+
+li.expItem p.skillSet span .pillow{
+  color: #d0a35a;
 }
 
 @media only screen and (min-width: 600px) {
   article.expGroup ul,
-  article.expGroup h1{
+  article.expGroup h1,
+  .notFound,
+  input#mainSearchBar,
+  .myName{
     max-width: 30em;
   }
 }
