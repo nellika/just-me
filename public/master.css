@@ -45,9 +45,22 @@ body{
 }
 
 /* search area */
+
 .search-container{
   margin-top: 2em;
+  margin-bottom: 1.5em;
   text-align: center;
+}
+
+.intro{
+  margin: 0 auto;
+  text-align: center;
+  width:75%;
+  color: var(--main-font-color);
+}
+
+.intro a{
+  color: #d0a35a;
 }
 
 input#mainSearchBar{
@@ -79,6 +92,10 @@ article.expGroup h1{
   margin: 0 auto;
 }
 
+article.expGroup ul{
+  padding: 0 1.5em;
+}
+
 article.expGroup h1{
   color: #d0a35a;
   font-weight: normal;
@@ -87,11 +104,11 @@ article.expGroup h1{
 li.expItem{
   border: 1px solid var(--secondary-color);
   border-radius: 20px;
-  margin: 1.5em;
+  margin: 1.5em 0;
+  width: 100%;
   display: inline-flex;
   flex-direction: column;
   flex: 1;
-  width:90%;
   color: var(--main-font-color);
 }
 
@@ -157,7 +174,8 @@ li.expItem p.skillSet span .pillow{
   article.expGroup h1,
   .notFound,
   input#mainSearchBar,
-  .myName{
+  .myName,
+  .intro{
     max-width: 30em;
   }
 }
