@@ -18,7 +18,7 @@ var myExp = {
         "place": "Hungary",
         "desc": "Developer Associate",
         "long desc": "I worked on SAP’s Integrated Business Planning Software as a junior developer. My specialization was data integration, which is a set of ETL tools. My responsibilities were: maintenance of our code base in 3 layers (HANA DB procedures/ABAP classes, OData services, Fiori UI5); handle customer messages and prepare hotfixes, patches in a cloud infrastructure; write test cases, testing new features in different landscapes",
-        "tools": "ibp,abap,hana db procedures (sqlscript),sql,js"
+        "tools": "ibp,abap,hana db procedures (sqlscript),sql,js,git"
       },
       "ibmfull":{
         "from": "2015. 04.",
@@ -27,7 +27,7 @@ var myExp = {
         "place": "Hungary",
         "desc": "VAT Reporting Specialist, Developer",
         "long desc": "I worked on several small development projects for multiple departments (accounts payable, VAT, external VAT client). As a developer, I helped designing and developing new web based tools for the business users. I also created and maintained several SQL reports and Excel macro templates for them.",
-        "tools": "js,css,html,sql,vba,backbone,underscore,jquery,bootstrap"
+        "tools": "js,css,html,sql,vba,backbone,underscore,jquery,bootstrap,Hyperion (Brio),QMF for Websphere"
       },
       "ibmstud":{
         "from": "2014. 02.",
@@ -36,7 +36,7 @@ var myExp = {
         "place": "Hungary",
         "desc": "Fin & Admin Business Analyst",
         "long desc": "As a student I was responsible for the access management of an internal accounting system in the EMEA region. I made monthly, quarterly and yearly reconciliations regarding my team’s tasks. After learning the basics, I had time for additional projects as well: I automated several processes of our team using VBA and VBScript.",
-        "tools": "sql,vbscript,vba"
+        "tools": "sql,vbscript,vba,QMF for Workstation,excel"
       }
     }
   },
@@ -49,7 +49,7 @@ var myExp = {
         "name": "Business Academy Aarhus",
         "place": "Denmark",
         "desc": "Multimedia Design and Communication (AP)",
-        "long desc": "design, design thinking, content creation,basic programming",
+        "long desc": "I moved to Denmark for almost a year to learn more about design and user experience. Our modules covered design, design thinking, content creation, basic programming and business models. It was a year about team work and user research.",
         "tools": "illustrator,wireframing,mockup creation,js,css,html,php"
       },
       "corvinus":{
@@ -58,8 +58,8 @@ var myExp = {
         "name": "Corvinus University of Budapest",
         "place": "Hungary",
         "desc": "Business Information Technology (BSc)",
-        "long desc": "programming, project management, accounting, finance",
-        "tools": "css,html,c#,php,sql,itil"
+        "long desc": "My major is an interdisciplinary program. I got the chance to study and/or practice programming, project management, accounting, finance. I like to explore new technologies, learn new languages, therefore my thesis work was about web components (Google). I built an entire application with web components that were at that time in beta phase.",
+        "tools": "css,html,js,c#,php,sql,wordpress,itil"
       }
     }
   }
