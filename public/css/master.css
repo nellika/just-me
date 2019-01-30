@@ -163,6 +163,8 @@ li.expItem p.skillSet{
 
 li.expItem p.skillSet>span{
   padding-right: 0.4em;
+  word-wrap: normal;
+  display: inline-block;
 }
 
 li.expItem p.skillSet span .pillow{
@@ -175,7 +177,8 @@ li.expItem p.skillSet span .pillow{
   .notFound,
   input#mainSearchBar,
   .myName,
-  .intro{
+  .intro,
+  li.expItem p.skillSet{
     max-width: 30em;
   }
 }

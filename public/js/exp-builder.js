@@ -17,7 +17,7 @@
       console.log(exp);
       let expItem = expItems[exp];
       /*create articles*/
-      createArticle(expItem.title,exp);
+      createArticle(expItem,exp);
 
       let indItems = expItem.items;
       for (var iE in indItems) {
@@ -30,12 +30,16 @@
   function createArticle(group,groupID){
     let nart = document.createElement("article");
     let nh1 = document.createElement("h1");
+    let nIcon = document.createElement("i");
     let nul = document.createElement("ul");
 
     nul.classList.add(groupID);
     nart.classList.add("expGroup");
+    nIcon.classList.add("fas");
+    nIcon.classList.add("fa-" + group['icon']);
 
-    nh1.appendChild(document.createTextNode(group));
+    nh1.appendChild(nIcon);
+    nh1.appendChild(document.createTextNode(' ~ ' + group['title']));
     nart.appendChild(nh1);
     nart.appendChild(nul);
     event_container.appendChild(nart);
@@ -136,5 +140,13 @@
       nf.classList.add('show');
     }
   }
+
+  document.getElementById("mainSearchBar")
+      .addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+          console.log('ddd');
+      }
+  });
 
 })();

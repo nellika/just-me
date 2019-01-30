@@ -1,6 +1,7 @@
 var myExp = {
   "work":{
     "title": "Worked at..",
+    "icon": "laptop",
     "items":{
       "pwc":{
         "from": "2019. 01.",
@@ -42,6 +43,7 @@ var myExp = {
   },
   "education": {
     "title": "Studied at...",
+    "icon": "graduation-cap",
     "items": {
       "baa":{
         "from": "2016",
@@ -59,7 +61,7 @@ var myExp = {
         "place": "Hungary",
         "desc": "Business Information Technology (BSc)",
         "long desc": "My major is an interdisciplinary program. I got the chance to study and/or practice programming, project management, accounting, finance. I like to explore new technologies, learn new languages, therefore my thesis work was about web components (Google). I built an entire application with web components that were at that time in beta phase.",
-        "tools": "css,html,js,c#,php,sql,wordpress,itil"
+        "tools": "css,html,js,c#,php,sql,wordpress,itil,sap erp"
       }
     }
   }
