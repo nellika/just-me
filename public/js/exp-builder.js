@@ -10,6 +10,13 @@
     searchForEvent(this.value);
   })
 
+  searchInput.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        searchInput.blur();
+    }
+  });
+
   renderAllexp(myExp);
 
   function renderAllexp(expItems){
@@ -140,13 +147,5 @@
       nf.classList.add('show');
     }
   }
-
-  document.getElementById("mainSearchBar")
-      .addEventListener("keyup", function(event) {
-      event.preventDefault();
-      if (event.keyCode === 13) {
-          alert('ddd');
-      }
-  });
 
 })();
