@@ -175,6 +175,7 @@ li.expItem p.skillSet span .pillow{
 @media only screen and (min-width: 600px) {
   article.expGroup ul,
   article.expGroup h1,
+  input#mainSearchBar,
   .notFound,
   .myName,
   .intro,
@@ -183,6 +184,41 @@ li.expItem p.skillSet span .pillow{
   }
 
   input#mainSearchBar{
-    max-width: 20em;
+    font-size: 0.8em;
   }
+}
+
+
+/* icons */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?9piisa');
+  src:  url('fonts/icomoon.eot?9piisa#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?9piisa') format('truetype'),
+    url('fonts/icomoon.woff?9piisa') format('woff'),
+    url('fonts/icomoon.svg?9piisa#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-books:before {
+  content: "\e920";
+}
+.icon-laptop:before {
+  content: "\e957";
 }

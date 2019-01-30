@@ -37,13 +37,12 @@
   function createArticle(group,groupID){
     let nart = document.createElement("article");
     let nh1 = document.createElement("h1");
-    let nIcon = document.createElement("i");
+    let nIcon = document.createElement("span");
     let nul = document.createElement("ul");
 
     nul.classList.add(groupID);
     nart.classList.add("expGroup");
-    nIcon.classList.add("fas");
-    nIcon.classList.add("fa-" + group['icon']);
+    nIcon.classList.add("icon-" + group['icon']);
 
     nh1.appendChild(nIcon);
     nh1.appendChild(document.createTextNode(' ~ ' + group['title']));

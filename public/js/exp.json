@@ -43,7 +43,7 @@ var myExp = {
   },
   "education": {
     "title": "Studied at...",
-    "icon": "graduation-cap",
+    "icon": "books",
     "items": {
       "baa":{
         "from": "2016",
