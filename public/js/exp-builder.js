@@ -1,6 +1,3 @@
-/*https://workday.wd5.myworkdayjobs.com/en-US/Workday/job/Ireland-Dublin/UX-Product-Designer_JR-22241-1*/
-/*https://www.avatier.com/careers/jobs/855E1AE972/*/
-/*https://www.cartrawler.com/ct/careers/vacancies/view?requirementId=696*/
 (function() {
   var event_container= document.getElementsByClassName('life-events')[0];
   var searchInput =  document.getElementById('mainSearchBar');

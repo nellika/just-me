@@ -9,7 +9,7 @@
 }
 
 
-/* #efdab9 basic formatting */
+/*basic formatting */
 input:focus,
 select:focus,
 textarea:focus,
@@ -50,6 +50,10 @@ body{
   margin-top: 2em;
   margin-bottom: 1.5em;
   text-align: center;
+}
+
+.show-print{
+
 }
 
 .intro{
@@ -221,4 +225,9 @@ li.expItem p.skillSet span .pillow{
 }
 .icon-laptop:before {
   content: "\e957";
+}
+
+.lang{
+  font-weight: bold;
+  display: block;
 }
