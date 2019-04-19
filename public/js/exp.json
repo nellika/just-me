@@ -5,7 +5,7 @@ var myExp = {
     "items":{
       "pwc":{
         "from": "2019. 01.",
-        "to": "",
+        "to": "2019. 02.",
         "name": "PwC Ireland",
         "place": "Ireland",
         "desc": "Junior DBA and Application Support Specialist",
